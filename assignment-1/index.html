@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Bookstore</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    Hello world
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DF-Assignment1</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header class="hContainer">
+    <div class="hItem">
+      <h1 id="lblPageName">BookStore</h1>
+    </div>
+    <div class="hItem">
+      <img id="picAvatar" class="anchorLeft" src="/img_avatar.png"/>
+      <span id="lblUserName" class="anchorRight">John Doe</span>
+    </div>
+  </header>
+
+  <main class="mContainer">
+    <action class="anchorRight">
+      <input id="txtSearch" class="anchorLeft" type="text" placeholder="Search book" autocomplete="off" onchange="txtSearch_onChange()">
+      <div id="btnSearch" class="btnRed anchorRight" onclick="openAddDialog(event)">Add Book</div>
+    </action>
+    <dataView>
+      <table id="dgv" class="anchorLeft">
+        <tbody>
+          <!--render by js-->
+        </tbody>
+      </table>
+    </dataView>
+  </main>
+  <!--Modal-->
+<!--<coverLayout id="newBookialog" style="display: none;position: fixed;z-index: 1;width: 100%;height: 100vh;top: 0;left:0;">
+    <newBookDialog style="display: block;width: 358px;height: 360px;margin: 17% auto;background-color: whitesmoke;border: 1px solid black;">
+        <h1 style="font-size: 20px; text-align: center; margin-top: 5%;">NEW BOOK</h1>
+      </dialogTitle>
+<dialogBody style="display: block;width: 325px;">
+        <nameinput style="display: flex;flex-flow: column;margin-top: 5%;margin-left: 10%;">
+          <span>Name:</span>
+          <input id="txtBookName" title="Name" placeholder="Book Name" type="text" style="margin-top: 2%;height: 36px;">
+        </nameinput>
+      <authorinput style="display: flex;flex-flow: column;margin-top: 5%;margin-left: 10%;">
+          <span>Author:</span>
+          <input id="txtAuthor" title="Author" placeholder="Author Name" type="text" style="margin-top: 2%;height: 36px;">
+        </authorinput><topicinput style="display: flex;flex-flow: column;margin-top: 5%;margin-left: 10%;">
+          <span>Topic:</span>
+          <select id="cbbTopic" style="height:36px; margin-top: 2%;">
+            <option value="comic">Comic</option>
+            <option value="programming">Programming</option>
+            <option value="fiction">Fiction</option>
+            <option value="classic">Classic</option>
+          </select>
+        </topicinput>
+</dialogBody>
+<dialogaction style="display: flex;margin-top: 33px;">
+        <div id="btnCancelAdd" class="btnCancel" style="text-align: center;width: 150px;height: 36px;padding-top: 2%;margin-left: 15px;border: 1px solid;" onclick="closeDialog('newBookialog')">Cancel</div>
+        <div id="btnConfirmDel" style="text-align: center;width: 150px;height: 36px;padding-top: 2%;margin-left: 28px;" class="btnRed" onclick="addBook()">Add Book</div>
+      </dialogaction>
+    </deleteDialog>
+  </coverLayout>-->
+  <script src="script.js" type="text/javascript"></script>
+</body>
+
 </html>

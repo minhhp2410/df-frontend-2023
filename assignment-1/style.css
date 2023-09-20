@@ -1,4 +1,101 @@
+/*global*/
 html {
   height: 100%;
   width: 100%;
+}
+*{
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0 0;
+}
+/*class*/
+.hContainer{
+   display: flex;
+   height: 60px;
+   width: 100%;
+   flex-flow: column wrap;
+   align-content: space-between;
+   border-bottom: 1px solid black;
+}
+.mContainer{
+   display:block;
+   width: 100%;
+   height: 94vh;
+   background-color: #F0F0F0;
+}
+.hItem{
+  flex-basis: 100%;
+  height: 100%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.anchorLeft{
+  float: left;
+}
+.anchorRight{
+  float: right;
+}
+.btnRed{
+  background-color: red;
+  color: white;
+}
+.btnDelete{
+  color: red;
+  cursor: pointer;
+}
+/*ID*/
+#picAvatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+#lblUserName{
+  margin: 15% 0;
+}
+#btnSearch{
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid black;
+  padding-top: 2%;
+}
+#txtSearch{
+  width: 250px;
+  height: 35px;
+}
+#dgv{
+  width: 95%;
+  margin-top: 15px;
+  margin-left: 2%;
+  text-align: left;
+  border-collapse: collapse;
+}
+#lblPageName, #picAvatar{
+  margin: 5% 0;
+}
+#picAvatar, #lblUserName{
+  margin-right: 10px;
+}
+#btnSearch, #txtSearch{
+  margin-top: 15px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+/*elements*/
+tr, th, td{
+  border: 1px solid black;
+  padding-left: 10px;
+  height:40px;
+}
+deleteDialog, dialogtitle,dialogmsg{
+  display: block;
+}
+/*interractive*/
+#btnSearch:hover,#btnConfirmDel:hover{
+  background-color: #7a0d0d;
+  cursor: pointer;
+}
+.btnCancel:hover{
+  background-color: #dddd;
+  cursor: pointer;
 }
